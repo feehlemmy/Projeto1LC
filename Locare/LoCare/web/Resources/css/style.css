@@ -1,0 +1,436 @@
+/* 
+    Created on : 25/06/2018, 14:35:51
+    Author     : gabriel
+*/
+
+.container_principal {
+    height: 100%;
+    width: -webkit-fill-available;
+    overflow: auto;
+    position: relative;
+    top: 0;
+    left: 0;
+    background-image: url("../img/img_index_intro.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.nav-edit {
+    background-color: rgb(255,255,255,0.85);
+    font-weight: bold;
+}
+
+/* Começo do CSS dos botões para complementar o Boostrap */
+.botoes {
+    position: relative;
+    padding-bottom: 15%;
+    left: 50%; /* posiciona na metade da tela */
+    transform: translate(-50%);
+}
+.btn-contratar {
+    background-color: #0074E4;
+    border-color: #0074E4;
+}
+.btn-contratar:hover {
+    background-color: #448EF6;
+    border-color: #448EF6;
+}
+.btn-trabalhar {
+    background-color: #2baf73;
+    border-color: #2baf73;
+}
+.btn-trabalhar:hover {
+    background-color: #5ac494;
+    border-color: #5ac494;
+}
+/* Fim do CSS dos botões */
+
+/* -- CSS para funcionamento dos cards -- */
+.cards {
+    position: relative;
+    padding: 10%;
+    left: 50%;
+    transform: translate(-50%);
+}
+.wrap {
+    margin:50px auto 0 auto;
+    width:100%;
+    display:flex;
+    align-items:center;
+    max-width:1200px;
+}
+.tile {
+    width:280px;
+    height:280px;
+    margin:10px;
+    background-color:#74dbef;
+    display:inline-block;
+    background-size:cover;
+    position:relative;
+    cursor:pointer;
+    transition: all 0.4s ease-out;
+    box-shadow: 0px 35px 77px -17px rgba(0,0,0,0.44);
+    overflow:hidden;
+    color:white;
+    /*font-family:'Roboto'; */
+}
+.tile img {
+    height:100%;
+    width:100%;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:0;
+    transition: all 0.4s ease-out;
+}
+.tile .text {
+    /*   z-index:99; */
+    position:absolute;
+    padding:30px;
+    height:calc(100% - 60px);
+}
+.tile h1 {
+    font-weight:300;
+    margin:0;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+}
+.tile h2 {
+    font-weight:100;
+    margin:20px 0 0 0;
+    font-style:italic;
+    transform: translateX(200px);
+}
+.tile p {
+    font-weight:300;
+    margin:20px 0 0 0;
+    line-height: 25px;
+    /*   opacity:0; */
+    transform: translateX(-200px);
+    transition-delay: 0.2s;
+}
+.animate-text {
+    opacity:0;
+    transition: all 0.6s ease-in-out;
+}
+.tile:hover {
+    /*   background-color:#99aeff; */
+    box-shadow: 0px 35px 77px -17px rgba(0,0,0,0.64);
+    transform:scale(1.05);
+}
+.tile:hover img {
+    opacity: 0.2;
+}
+.tile:hover .animate-text {
+    transform:translateX(0);
+    opacity:1;
+}
+.tile:hover span {
+    opacity:1;
+    transform:translateY(0px);
+}
+@media (max-width: 1000px) {
+    .wrap {
+        flex-direction: column;
+    }
+}
+/* -- Fim do CSS  dos cards -- */
+
+/* -- CSS para o Como Funciona -- */
+.container-how {
+    padding-top: 10%;
+}
+
+/* -- CSS para funcionamento da timeline -- */
+.container_sobre {
+    display: table;
+    width: 100%;
+    height: auto;
+    padding: 70% 0;
+    text-align: center;
+    color: #768390;
+    background: #FFF;
+    /*font-family: "Effra", Helvetica, sans-serif;*/
+}
+#conference-timeline {
+    max-width: 920px;
+    width: 100%;
+    margin: 0 auto;
+}
+#conference-timeline .timeline-start,
+#conference-timeline .timeline-end {
+    display: table;
+    /*font-family: "Roboto", sans-serif;*/
+    font-size: 18px;
+    font-weight: 900;
+    text-transform: uppercase;
+    background: #00b0bd;
+    padding: 15px 23px;
+    color: #fff;
+    max-width: 5%;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+}
+#conference-timeline .conference-timeline-content {
+    padding-top: 67px;
+    padding-bottom: 67px;
+}
+.timeline-content{
+    padding-top: 10%;
+}
+.timeline-article {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    margin: 20px 0;
+}
+.timeline-article .content-left-container,
+.timeline-article .content-right-container {
+    max-width: 44%;
+    width: 100%;
+}
+.timeline-article .timeline-author {
+    display: block;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: #242424;
+    text-align: right;
+}
+.timeline-article .content-left,
+.timeline-article .content-right {
+    position: relative;
+    width: auto;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0,0,0,.03);
+    padding: 27px 25px;
+}
+.timeline-article p {
+    margin: 0 0 0 60px;
+    padding: 0;
+    font-weight: 400;
+    color: #242424;
+    font-size: 14px;
+    line-height: 24px;
+    position: relative;
+}
+.timeline-article p span.article-number {
+    position: absolute;
+    font-weight: 300;
+    font-size: 44px;
+    top: 10px;
+    left: -60px;
+    color: #00b0bd;
+}
+.timeline-article .content-left-container {
+    float: left;
+}
+.timeline-article .content-right-container {
+    float: right;
+}
+.timeline-article .content-left:before,
+.timeline-article .content-right:before{
+    position: absolute;
+    top: 20px;
+    font-size: 23px;
+    /*font-family: "FontAwesome";*/
+    color: #fff;
+}
+.timeline-article .content-left:before {
+    content: "\f0da";
+    right: -8px;
+}
+.timeline-article .content-right:before {
+    content: "\f0d9";
+    left: -8px;
+}
+.timeline-article .meta-date {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 62px;
+    height: 62px;
+    margin-left: -31px;
+    color: #fff;
+    border-radius: 100%;
+    background: #00b0bd;
+    padding-top: 1%;
+}
+.timeline-article .meta-date .date,
+.timeline-article .meta-date .month {
+    display: block;
+    text-align: center;
+    font-weight: 900;
+}
+.timeline-article .meta-date .date {
+    font-size: 30px;
+    line-height: 40px;
+}
+.timeline-article .meta-date .month {
+    font-size: 18px;
+    line-height: 10px;
+}
+/*===== // Vertical Timeline =====*/
+
+/*===== Resonsive Vertical Timeline =====*/
+@media only screen and (max-width: 830px) {
+    #conference-timeline .timeline-start,
+    #conference-timeline .timeline-end {
+        margin: 0;
+    }
+    
+    .timeline-article .meta-date {
+        margin-left: 0;
+        left: 20px;
+    }
+    .timeline-article .content-left-container,
+    .timeline-article .content-right-container {
+        max-width: 100%;
+        width: auto;
+        float: none;
+        margin-left: 110px;
+        min-height: 53px;
+    }
+    .timeline-article .content-left-container {
+        margin-bottom: 20px;
+    }
+    .timeline-article .content-left,
+    .timeline-article .content-right {
+        padding: 10px 25px;
+        min-height: 65px;
+    }
+    .timeline-article .content-left:before {
+        content: "\f0d9";
+        right: auto;
+        left: -8px;
+    }
+    .timeline-article .content-right:before {
+        display: none;
+    }
+}
+@media only screen and (max-width: 400px) {
+    .timeline-article p {
+        margin: 0;
+    }
+    .timeline-article p span.article-number {
+        display: none;
+    }
+}
+/* -- Fim do CSS da timeline -- */
+
+/* -- CSS Rodapé -- */
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #f5f5f5;
+}
+
+/* -- CSS Dashboard --*/
+.wrapper {
+    display: flex;
+    align-items: stretch;
+}
+
+#sidebar {
+    min-width: 250px;
+    max-width: 250px;
+    min-height: 100vh;
+}
+
+#sidebar.active {
+    margin-left: -250px;
+}
+
+a[data-toggle="collapse"] {
+    position: relative;
+}
+
+.dropdown-toggle::after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+@media (max-width: 768px) {
+    #sidebar {
+        margin-left: -250px;
+    }
+    #sidebar.active {
+        margin-left: 0;
+    }
+}
+
+/*
+    ADDITIONAL DEMO STYLE, NOT IMPORTANT TO MAKE THINGS WORK BUT TO MAKE IT A BIT NICER :)
+*/
+
+
+body {
+    background: #fafafa;
+}
+
+p {
+    font-size: 1.1em;
+    font-weight: 300;
+    line-height: 1.7em;
+    color: #999;
+}
+
+a, a:hover, a:focus {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+#sidebar {
+    /* don't forget to add all the previously mentioned styles here too */
+    min-width: 250px;
+    max-width: 250px;
+    min-height: 100vh;  
+    background: #7386D5;
+    color: #fff;
+    transition: all 0.3s;
+}
+
+#sidebar .sidebar-header {
+    padding: 20px;
+    background: #6d7fcc;
+}
+
+#sidebar ul.components {
+    padding: 20px 0;
+    border-bottom: 1px solid #47748b;
+}
+
+#sidebar ul p {
+    color: #fff;
+    padding: 10px;
+}
+
+#sidebar ul li a {
+    padding: 10px;
+    font-size: 1.1em;
+    display: block;
+}
+#sidebar ul li a:hover {
+    color: #7386D5;
+    background: #fff;
+}
+
+#sidebar ul li.active > a, a[aria-expanded="true"] {
+    color: #fff;
+    background: #6d7fcc;
+}
+ul ul a {
+    font-size: 0.9em !important;
+    padding-left: 30px !important;
+    background: #6d7fcc;
+}

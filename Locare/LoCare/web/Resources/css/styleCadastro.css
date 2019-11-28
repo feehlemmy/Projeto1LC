@@ -1,0 +1,26 @@
+body {
+    background-image: url("../img/back.jpg");
+     background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#box{
+width: 50%;
+position: relative;
+margin-top: 10%;
+padding: 0px;
+
+}
+
+#title{
+    text-align: center;
+    color: #FFF;
+}
+
+.lbl_signin{
+    font-size: 12px;
+}.btn_container{
+    margin-top: 15px;
+}
